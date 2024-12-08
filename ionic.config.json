@@ -1,0 +1,7 @@
+{
+  "name": "sonam-rani",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

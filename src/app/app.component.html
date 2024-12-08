@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Sonam Rani's Library</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-container">
+  <!-- List of Records Section -->
+  <ion-card class="records-card">
+    <ion-card-header>
+      <ion-card-title>List of Records</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Edition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td>{{ book.id }}</td>
+            <td>{{ book.book_name }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.edition }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Add New Record Section -->
+  <ion-card class="form-card">
+    <ion-card-header>
+      <ion-card-title>Add New Record</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Id:</ion-label>
+        <ion-input [(ngModel)]="newBook.id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Name:</ion-label>
+        <ion-input [(ngModel)]="newBook.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Author:</ion-label>
+        <ion-input [(ngModel)]="newBook.author"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Edition:</ion-label>
+        <ion-input [(ngModel)]="newBook.edition"></ion-input>
+      </ion-item>
+      <ion-button expand="block" color="primary" (click)="addBook()">Add Record</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Delete Record Section -->
+  <ion-card class="form-card">
+    <ion-card-header>
+      <ion-card-title>Delete Record</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Id:</ion-label>
+        <ion-input [(ngModel)]="deleteBookId"></ion-input>
+      </ion-item>
+      <ion-button expand="block" color="danger" (click)="deleteBookById()">Delete Record</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Search Book by Name Section -->
+<ion-card class="form-card">
+  <ion-card-header>
+    <ion-card-title>Search Book</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="stacked">Search by Name:</ion-label>
+      <ion-input [(ngModel)]="searchQuery"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="secondary" (click)="searchBook()">Search</ion-button>
+  </ion-card-content>
+</ion-card>
+
+
+  <!-- Outcome Section -->
+  <ion-card class="outcome-card">
+    <ion-card-header>
+      <ion-card-title>Outcome</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p *ngIf="outcomeMessage">{{ outcomeMessage }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

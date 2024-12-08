@@ -1,0 +1,55 @@
+.custom-container {
+    --ion-background-color: #f8f9fa;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .records-card,
+  .form-card,
+  .outcome-card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  ion-item {
+    margin-top: 10px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    width: 100%;
+  }
+  
+  .styled-table th, 
+  .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .styled-table thead tr {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
